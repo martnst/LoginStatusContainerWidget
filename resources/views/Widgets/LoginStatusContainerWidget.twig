@@ -12,7 +12,7 @@
 <div class="widget widget-login-status {{ desiredLoginStatus }}">
   {{ Twig.if("desiredLoginStatus == actualLoginStatus or #{ isPreview | json_encode }") }}
   <div data-builder-child-container="body">
-    {{ WidgetHelper.editableTwig(isPreview, children.body) }}
+    {{ children.body | raw }}
   </div>
   {{ Twig.else() }}
     <!--container is hidden as user is not {{ desiredLoginStatus }} -->
