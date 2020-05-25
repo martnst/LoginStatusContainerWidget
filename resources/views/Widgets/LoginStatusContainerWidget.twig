@@ -9,7 +9,7 @@
   {{ Twig.set("actualLoginStatus", "logged-out" | json_encode)}}
 {{ Twig.endif() }}
 
-<div class="widget widget-login-status {{ desiredLoginStatus }}">
+<div class="widget widget-login-status {{ desiredLoginStatus }}" {% if isPreview %}style="position: relative;"{% endif %} >
   {{ Twig.if("desiredLoginStatus == actualLoginStatus or #{ isPreview | json_encode }") }}
   <div data-builder-child-container="body">
     {{ children.body | raw }}
@@ -18,6 +18,6 @@
     <!--container is hidden as user is not {{ desiredLoginStatus }} -->
   {{ Twig.endif() }}
   {% if isPreview %}
-    <div style="color: gray; font-size: xx-small;">Login Status Container: Visible for {{ desiredLoginStatus }} Users</div>
+    <div style="color: gray; font-size: xx-small; position: absolute; bottom: 0; left: 5px;">Login Status Container: Visible for {{ desiredLoginStatus }} Users</div>
   {% endif %} 
 </div>
