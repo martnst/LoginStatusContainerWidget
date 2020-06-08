@@ -1,6 +1,6 @@
 {
   "name": "LoginStatusContainerWidget",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "serviceProvider": "LoginStatusContainerWidget\\Providers\\LoginStatusContainerWidgetServiceProvider",
   "author": "Martin Stemmle",
   "pluginIcon": "icon_plugin_xs.png",
